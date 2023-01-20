@@ -1,0 +1,54 @@
+{% load static %}
+
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'navbar-top-fixed.css' %}">
+  <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700' %}"> 
+  <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary btn-success">
+    <div class="container-fluid">
+      <a class="navbar-brand btn-success" href="http://127.0.0.1:8000/cadastr">API_REST</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      
+      </div>
+    </div>
+  </nav>
+
+
+
+
+ <center>
+  <form method="POST" enctype="multipart/form-data">
+    <br><br><br><br>
+    {% csrf_token %}
+
+    <div class="">
+        <div class="col-md-7 col-xs-10">
+          
+          <div class="x_panel">
+            <div class="x_title">
+              <h2>Import Excel </h2>           
+              <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+           
+              <div class="col-md-8 col-sm-12 col-xs-12 form-group">      
+              </div>
+                    <input type="file" name="myfile" class="form-control"required>
+                    <br>
+                             <button type="submit" class="btn btn-success" >Upload Com Pandas</button> 
+                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+  </form>  
+</center> 
+{% endblock %}

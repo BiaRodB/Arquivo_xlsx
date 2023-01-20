@@ -18,16 +18,17 @@ from datetime import datetime
  
 class ClientesViewSet(viewsets.ModelViewSet):
     queryset = Inserir.objects.all()
-    classe = ClienteSerializer
-    filtros = [DjangoFilterBackend, filters.OrderingFilter]
-    ordem = ['nascimento'] 
+    serializer_class = ClienteSerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    ordering = ['nascimento'] 
+    filterset_fields = ['sexo','cidade']
 
 
 class FiltroViewSet(viewsets.ModelViewSet):
     queryset = Inserir.objects.filter(cidade='Meeren',sexo='F')
-    classe = ClienteSerializer
-    filtros = [DjangoFilterBackend, filters.OrderingFilter]
-    ordem = ['nascimento'] 
+    serializer_class = ClienteSerializer
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    ordering = ['nascimento'] 
   
 
 def cadastrar(request):

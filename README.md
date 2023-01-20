@@ -234,29 +234,24 @@ Colocaremos o seguinte código:
 {% load static %}
 
 {% block content %}
-
-
-
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+ <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
   <link rel="stylesheet" href="{% static 'navbar-top-fixed.css' %}">
   <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700' %}"> 
   <link rel="stylesheet" href="{% static 'dist/css/style.css' %}">
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary btn-success">
+  <nav class="navbar navbar-dark bg-dark ">
     <div class="container-fluid">
-      <a class="navbar-brand btn-success" href="http://127.0.0.1:8000/cadastr">API_REST</a>
+      <a class="navbar navbar-dark bg-dark btn btn-dark" href="http://127.0.0.1:8000/cadastro">API_REST</a>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       
       </div>
     </div>
-  </nav>
+    </nav>
 
 
-
-
- <center>
+  <center>
   <form method="POST" enctype="multipart/form-data">
     <br><br><br><br>
     {% csrf_token %}
@@ -266,7 +261,7 @@ Colocaremos o seguinte código:
           
           <div class="x_panel">
             <div class="x_title">
-              <h2>Import Excel </h2>           
+              <h2>Importar arquivos Excel (.xlsx) </h2>           
               <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -275,7 +270,8 @@ Colocaremos o seguinte código:
               </div>
                     <input type="file" name="myfile" class="form-control"required>
                     <br>
-                             <button type="submit" class="btn btn-success" >Upload Com Pandas</button> 
+                    <button type="submit" class="btn btn-dark">Importar</button> 
+
                           
                             </div>
                         </div>
